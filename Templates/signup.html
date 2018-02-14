@@ -1,0 +1,39 @@
+<div class="form">
+  <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
+  <form  name="form" class="form">
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" placeholder="Username" ng-model="newusername" name="newusername" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" placeholder="Name" ng-model="newname" name="newname" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input placeholder="Password" name="pwd" ng-model="thePwd"  class="form-control" type="password" pattern=".{5,}" required />
+          <div class="error-message" ng-if="form.pwd.$invalid && form.pwd.$dirty">
+              <small>Passwords must have at least 5 chars.</small>
+              </div>
+            </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input placeholder="Confirm Password" class="form-control"   name="check" ng-model="chkPwd" type="password" wj-validation-error="chkPwd != thePwd ? 'Passwords don\'t match' : ''" />
+            <div class="error-message" ng-if="form.check.$invalid && form.check.$dirty ">
+                    <small>Sorry, the passwords don't match.</small>
+                </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" placeholder="Email" ng-model="newemail" name="newemail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" required>
+          </div>
+        </div>
+
+        <button ng-click="login">Create</button>
+        <p class="message">Already Registered? <a ng-click="login()">Sign In</a></p>
+      </form>
+    </div>

@@ -1,0 +1,30 @@
+<br/><hr>
+<div class = "col-md-4 col-md-offset-4">
+    <form ng-submit = "submit()">
+        <h3>Choose a Batch</h3>
+        <select class = "form-control"   name="batch" required  ng-model="batch">
+            <option value="" hidden class="placeholder">Select a batch</option>
+            <option ng-repeat="batch in batches">{{batch}}</option>
+        </select>
+
+        <br>
+        <br>
+        <h3>Choose a branch</h3>
+        <select class = "form-control"   name="branch" required  ng-model="branch">
+            <option value="" hidden class="placeholder">Select a branch</option>
+            <option ng-repeat="branch in branches">{{branch}}</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>Choose a semester</h3>
+        <select class = "form-control"   name="semester" required  ng-model="semester">
+            <option value="" hidden class="placeholder">Select a Semester</option>
+            <option ng-repeat="semester in semesters">{{semester}}</option>
+        </select>
+
+        <br><hr><br>
+        <button class="btn btn-primary" value="submit">Submit</button>
+    </form>
+</div>
