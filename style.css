@@ -7,6 +7,9 @@
     display: inline-block;
 }
 /* Form */
+#file{
+  display: inline;
+}
 .form {
   position: relative;
   z-index: 1;

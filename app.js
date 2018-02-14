@@ -1,7 +1,7 @@
 
 (function(){
 
-    var app = angular.module('juApp',['ui.router', 'ui.bootstrap', 'ngSanitize', 'ui.select']);
+    var app = angular.module('juApp',['ui.router', 'ui.bootstrap', 'ngSanitize', 'ui.select','ui.uploader']);
     app.config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
